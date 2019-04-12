@@ -1,0 +1,16 @@
+{
+    "products": [
+        {
+            "name": "basic electricity tarif",
+            "base_cost": 60,
+            "base_consumption": 0,
+            "incremental_cost" : 0.22 
+        },
+        {
+            "name": "Packaged tariff",
+            "base_cost": 800,
+            "base_consumption": 4000,
+            "incremental_cost": 0.30
+        }
+    ]
+}
