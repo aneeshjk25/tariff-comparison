@@ -14,9 +14,13 @@ export class AppComponent  implements OnInit {
 
   }
   onSubmit(queryCost) {
-    this.annualCostProducts = this.products.map((product) => {
+    this.annualCostProducts = this.products
+    .map((product) => {
       return this.calculateTariffCost(queryCost, product);
-    });
+    })
+    .sort((productA, productB) => {
+      return productA.annual_cost - productB.annual_cost;
+    })
   }
   calculateTariffCost(consumption:number,product: Product,){
     const newProduct = Object.assign({}, product);
